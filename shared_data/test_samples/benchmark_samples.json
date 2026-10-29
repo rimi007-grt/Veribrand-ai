@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "suite_name": "VeriBrand AI Pre-Publication Governance Benchmark Suite",
+  "version": "2026.1",
+  "description": "Standard ground-truth benchmark presets for evaluating multi-pillar compliance audits (claim verification, ASCI puffery, trademark enforcement, and visual accessibility).",
+  "samples": {
+    "sample_flawed_01": {
+      "id": "sample_flawed_01",
+      "title": "Non-Compliant Product Launch Social Announcement",
+      "channel": "social_media_linkedin",
+      "target_audience": "Enterprise DevOps & Cloud Architects",
+      "raw_text": "Introducing Aerocloud's newest cloud mesh solution! It is simply the cheapest enterprise platform in the market today, delivering revolutionary distributed computing with zero friction. Our proprietary MeshSync architecture guarantees 100% foolproof uptime and 80% bill cuts for all hybrid workloads. Join thousands of innovators who enjoy unbeatable savings and an unbreachable cloud edge!",
+      "visual_metadata": {
+        "headline_color": "#38BDF8",
+        "background_color": "#FFFFFF",
+        "font_size_pt": 24,
+        "is_bold": true,
+        "detected_contrast_ratio": 1.95,
+        "wcag_aa_compliant": false
+      },
+      "expected_compliance_status": "flagged",
+      "expected_violations": [
+        {
+          "pillar": "terminology",
+          "severity": "error",
+          "flagged_text": "Aerocloud",
+          "rule_citation": "Brand Kit - Mandatory Trademarks: AeroCloud™",
+          "explanation": "Missing trademark symbol ™ and incorrect capitalization. Corporate identity must strictly be formatted as 'AeroCloud™'."
+        },
+        {
+          "pillar": "terminology",
+          "severity": "error",
+          "flagged_text": "cheapest",
+          "rule_citation": "ASCI Code Chapter I, Clause 1.4",
+          "explanation": "Unsubstantiated comparative price superiority claim. Violates ASCI guidelines unless backed by comprehensive contemporaneous market audits."
+        },
+        {
+          "pillar": "tone",
+          "severity": "warning",
+          "flagged_text": "revolutionary",
+          "rule_citation": "ASCI Code Chapter I, Clause 1.2",
+          "explanation": "Subjective hyperbole and unsubstantiated puffery."
+        },
+        {
+          "pillar": "terminology",
+          "severity": "error",
+          "flagged_text": "MeshSync",
+          "rule_citation": "Brand Kit - Mandatory Trademarks: MeshSync®",
+          "explanation": "Missing registered trademark symbol ®. Registered technology mark must be rendered as 'MeshSync®'."
+        },
+        {
+          "pillar": "claim",
+          "severity": "error",
+          "flagged_text": "guarantees 100% foolproof uptime",
+          "rule_citation": "Master Spec 2026, Section 2.1 & ASCI Code Chapter I, Clause 1.2",
+          "explanation": "Exceeds approved SLA boundary of 99.95% API uptime and asserts prohibited absolutist zero-downtime puffery."
+        },
+        {
+          "pillar": "claim",
+          "severity": "error",
+          "flagged_text": "80% bill cuts",
+          "rule_citation": "AeroCloud Master Spec 2026, Clause 8",
+          "explanation": "Unsupported financial claim. Approved benchmark limit is 'reduces egress by up to 35% under Clause 8'."
+        },
+        {
+          "pillar": "tone",
+          "severity": "error",
+          "flagged_text": "unbeatable",
+          "rule_citation": "ASCI Code Chapter I, Clause 1.4",
+          "explanation": "Exaggerated superlative puffery without comparative third-party audit verification."
+        },
+        {
+          "pillar": "accessibility",
+          "severity": "error",
+          "flagged_text": "#38BDF8 on #FFFFFF",
+          "rule_citation": "W3C WCAG 2.1 SC 1.4.3 Level AA",
+          "explanation": "Contrast ratio 1.95:1 fails the minimum required threshold of 3.0:1 for large display text and 4.5:1 for body text."
+        }
+      ]
+    },
+    "sample_clean_02": {
+      "id": "sample_clean_02",
+      "title": "Compliant Enterprise Launch Announcement",
+      "channel": "press_release_and_social",
+      "target_audience": "Chief Technology Officers & Infrastructure Directors",
+      "raw_text": "AeroCloud Systems is proud to introduce next-generation distributed mesh orchestration with AeroCloud™. Powered by MeshSync®, the platform provides an enterprise-grade 99.95% API uptime SLA under Master Spec 2026, Section 2.1. In independent benchmark tests, intelligent routing reduces egress by up to 35% under Clause 8, while maintaining sub-15ms cross-region telemetry synchronization under Clause 4.3. Secure your edge infrastructure with hardware-backed zero-trust mutual TLS 1.3 encryption across all inter-node channels under Clause 14.1.",
+      "visual_metadata": {
+        "headline_color": "#0F172A",
+        "background_color": "#FFFFFF",
+        "font_size_pt": 24,
+        "is_bold": true,
+        "detected_contrast_ratio": 15.25,
+        "wcag_aa_compliant": true
+      },
+      "expected_compliance_status": "passed",
+      "expected_violations": []
+    }
+  }
+}
+

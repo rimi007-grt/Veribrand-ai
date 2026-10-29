@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "regulatory_framework": "Advertising Standards Council of India (ASCI) Code for Self-Regulation",
+  "chapter": "Chapter I: For Truthful and Honest Representations",
+  "legal_nexus": "Consumer Protection Act 2019 / Central Consumer Protection Authority (CCPA) Guidelines for Prevention of Misleading Advertisements 2022",
+  "version": "2026.1",
+  "rules": [
+    {
+      "id": "ASCI-CH1-001",
+      "banned_term": "cheapest",
+      "match_patterns": [
+        "\\bcheapest\\b",
+        "\\bthe cheapest\\b",
+        "\\blowest price in the (market|world|industry)\\b"
+      ],
+      "category": "unsubstantiated_price_superiority",
+      "clause_reference": "ASCI Chapter I, Clause 1.4",
+      "regulatory_justification": "Under Clause 1.4, advertisements must not make comparative pricing or market-wide cost superiority claims unless substantiated by comprehensive, contemporaneous third-party market price audits across all relevant competitors and tier configurations.",
+      "severity": "error",
+      "compliant_alternatives": [
+        "cost-effective",
+        "competitively priced",
+        "engineered for optimal total cost of ownership (TCO)",
+        "budget-conscious enterprise tier"
+      ],
+      "actionable_guidance": "Replace superlative absolute pricing claims with verifiable relative descriptions, or cite audited pricing studies with published date and methodology."
+    },
+    {
+      "id": "ASCI-CH1-002",
+      "banned_term": "guaranteed cure",
+      "match_patterns": [
+        "\\bguaranteed cure\\b",
+        "\\bcures guaranteed\\b",
+        "\\bpermanent cure\\b",
+        "\\b100% cure\\b"
+      ],
+      "category": "unlawful_therapeutic_claim",
+      "clause_reference": "ASCI Chapter I, Clause 1.1 & 1.5; Drugs and Magic Remedies (Objectionable Advertisements) Act 1954",
+      "regulatory_justification": "Clause 1.1 strictly forbids deceptive, misleading, or scientifically unproven health, wellness, and medical efficacy guarantees. Absolute claims of 'cure' violate statutory consumer protection mandates and require double-blind peer-reviewed clinical validation approved by statutory regulatory bodies.",
+      "severity": "error",
+      "compliant_alternatives": [
+        "clinically evaluated to assist with",
+        "scientifically formulated to support management of",
+        "demonstrated supportive efficacy in clinical trials",
+        "developed to complement therapeutic protocols"
+      ],
+      "actionable_guidance": "Never use the word 'cure' or absolute guarantees for medical or therapeutic outcomes. Frame results in terms of clinically measured indicators."
+    },
+    {
+      "id": "ASCI-CH1-003",
+      "banned_term": "100% foolproof",
+      "match_patterns": [
+        "\\b100% foolproof\\b",
+        "\\bcompletely foolproof\\b",
+        "\\bfoolproof\\b",
+        "\\bzero risk\\b",
+        "\\b100% fail-safe\\b"
+      ],
+      "category": "absolutist_reliability_hyperbole",
+      "clause_reference": "ASCI Chapter I, Clause 1.2",
+      "regulatory_justification": "Clause 1.2 prohibits exaggerated or absolutist representations that distort technical realities or lead consumers to assume impossible guarantees of zero failure or total immunity from operational disruptions.",
+      "severity": "error",
+      "compliant_alternatives": [
+        "high-resilience architecture",
+        "engineered for enterprise fault tolerance",
+        "backed by 99.95% availability commitments",
+        "rigorously tested against mission-critical edge cases"
+      ],
+      "actionable_guidance": "Replace 100% or absolute claims with precise statistical availability metrics backed by formal SLAs and test benchmarks."
+    },
+    {
+      "id": "ASCI-CH1-004",
+      "banned_term": "unbeatable",
+      "match_patterns": [
+        "\\bunbeatable\\b",
+        "\\bunmatched performance\\b",
+        "\\bunrivaled\\b",
+        "\\bpeerless\\b"
+      ],
+      "category": "exaggerated_puffery",
+      "clause_reference": "ASCI Chapter I, Clause 1.4",
+      "regulatory_justification": "Clause 1.4 restricts claims of absolute market dominance or invulnerability against competitors without published comparative evidence that is verifiable by independent testing authorities.",
+      "severity": "error",
+      "compliant_alternatives": [
+        "high-performance tier",
+        "industry-leading benchmark performance",
+        "engineered to surpass standard workload thresholds",
+        "recognized for enterprise agility"
+      ],
+      "actionable_guidance": "Quantify performance using benchmark test results and formal metrics rather than unprovable superlatives."
+    },
+    {
+      "id": "ASCI-CH1-005",
+      "banned_term": "revolutionary",
+      "match_patterns": [
+        "\\brevolutionary\\b",
+        "\\bmiracle breakthrough\\b",
+        "\\bmagic solution\\b"
+      ],
+      "category": "unsubstantiated_puffery",
+      "clause_reference": "ASCI Chapter I, Clause 1.2",
+      "regulatory_justification": "Clause 1.2 penalizes hyperbolic puffery in commercial communications that misleads buyers on the actual incremental nature of technical or product updates.",
+      "severity": "warning",
+      "compliant_alternatives": [
+        "next-generation",
+        "novel architectural approach",
+        "significant architectural advancement",
+        "modernized capability"
+      ],
+      "actionable_guidance": "Highlight specific novel technical features or measurable performance improvements rather than emotional hyperbole."
+    },
+    {
+      "id": "ASCI-CH1-006",
+      "banned_term": "guaranteed results",
+      "match_patterns": [
+        "\\bguaranteed results\\b",
+        "\\bresults guaranteed\\b",
+        "\\bmoney back guarantee\\b"
+      ],
+      "category": "unqualified_commercial_guarantee",
+      "clause_reference": "ASCI Chapter I, Clause 1.3",
+      "regulatory_justification": "Under Clause 1.3, guarantees must clearly disclose all material terms, limitations, preconditions, and dispute mechanisms rather than offering blank unconditional promises.",
+      "severity": "warning",
+      "compliant_alternatives": [
+        "performance governed by contractual SLA",
+        "subject to defined deployment criteria and enterprise agreements",
+        "backed by measurable Service Level Commitments"
+      ],
+      "actionable_guidance": "Always attach explicit SLA terms, reference clauses, and operational prerequisites to guarantee statements."
+    }
+  ]
+}
+

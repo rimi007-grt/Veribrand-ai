@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "standard": "W3C Web Content Accessibility Guidelines (WCAG) 2.1",
+  "version": "2.1",
+  "last_updated": "2026-01-15T00:00:00Z",
+  "compliance_authority": "World Wide Web Consortium (W3C) Accessibility Guidelines Working Group",
+  "reference_urls": [
+    "https://www.w3.org/TR/WCAG21/#contrast-minimum",
+    "https://www.w3.org/TR/WCAG21/#contrast-enhanced",
+    "https://www.w3.org/TR/WCAG21/#non-text-contrast"
+  ],
+  "levels": {
+    "AA": {
+      "name": "Level AA (Mandatory Legal Minimum)",
+      "description": "Standard compliance baseline required by global regulatory frameworks including ADA Title III, Section 508, and EN 301 549.",
+      "text_contrast": {
+        "body_text": {
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "minimum_ratio": 4.5,
+          "font_size_definition": "Text smaller than 18pt (24px) regular weight or smaller than 14pt (18.66px) bold weight.",
+          "max_point_size_regular": 17.99,
+          "max_pixel_size_regular": 23.99,
+          "severity_on_failure": "error"
+        },
+        "large_display_text": {
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "minimum_ratio": 3.0,
+          "font_size_definition": "Text at or above 18pt (24px) regular weight or at or above 14pt (18.66px) bold weight (typically font-weight >= 700).",
+          "min_point_size_regular": 18.0,
+          "min_pixel_size_regular": 24.0,
+          "min_point_size_bold": 14.0,
+          "min_pixel_size_bold": 18.66,
+          "severity_on_failure": "error"
+        },
+        "incidental_or_decorative_text": {
+          "criterion": "1.4.3 Contrast (Minimum) - Exception",
+          "minimum_ratio": 0.0,
+          "font_size_definition": "Text or images of text that are part of an inactive user interface component, pure decoration, or part of a picture that contains significant other visual content.",
+          "severity_on_failure": "advisory"
+        }
+      },
+      "non_text_contrast": {
+        "ui_components_and_graphical_objects": {
+          "criterion": "1.4.11 Non-text Contrast",
+          "minimum_ratio": 3.0,
+          "description": "Visual information required to identify user interface components and states, or graphical objects necessary for comprehension.",
+          "severity_on_failure": "warning"
+        }
+      }
+    },
+    "AAA": {
+      "name": "Level AAA (Enhanced Accessibility)",
+      "description": "Optimal accessibility threshold providing enhanced visual legibility for high-consequence public and enterprise portals.",
+      "text_contrast": {
+        "body_text": {
+          "criterion": "1.4.6 Contrast (Enhanced)",
+          "minimum_ratio": 7.0,
+          "font_size_definition": "Text smaller than 18pt (24px) regular or 14pt (18.66px) bold.",
+          "severity_on_failure": "warning"
+        },
+        "large_display_text": {
+          "criterion": "1.4.6 Contrast (Enhanced)",
+          "minimum_ratio": 4.5,
+          "font_size_definition": "Text at or above 18pt (24px) regular or 14pt (18.66px) bold.",
+          "severity_on_failure": "warning"
+        }
+      }
+    }
+  },
+  "mathematical_formula": {
+    "relative_luminance": "L = 0.2126 * R + 0.7152 * G + 0.0722 * B, where sRGB channels are linearized: if c_sRGB <= 0.04045 then c = c_sRGB / 12.92 else c = ((c_sRGB + 0.055) / 1.055) ^ 2.4",
+    "contrast_ratio": "(L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 is the relative luminance of the darker color",
+    "ratio_range": "1.0 to 21.0"
+  }
+}
+

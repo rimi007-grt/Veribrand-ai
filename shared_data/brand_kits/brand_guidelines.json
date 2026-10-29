@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "brand": {
+    "company_name": "AeroCloud Systems",
+    "legal_entity": "AeroCloud Systems International, Inc.",
+    "industry": "Enterprise Cloud Infrastructure & Distributed Edge Mesh",
+    "version": "2026.1",
+    "last_reviewed": "2026-01-20T00:00:00Z"
+  },
+  "palette": {
+    "primary": {
+      "name": "Slate 900",
+      "hex": "#0F172A",
+      "rgb": { "r": 15, "g": 23, "b": 42 },
+      "hsl": { "h": 222, "s": 47, "l": 11 },
+      "usage": "Primary body typography, dark hero canvases, high-emphasis UI borders",
+      "role": "core_brand"
+    },
+    "brand_accent": {
+      "name": "Royal Blue 600",
+      "hex": "#2563EB",
+      "rgb": { "r": 37, "g": 99, "b": 235 },
+      "hsl": { "h": 221, "s": 83, "l": 53 },
+      "usage": "Primary interactive CTAs, verified badges, key brand identifiers",
+      "role": "accent_interactive"
+    },
+    "secondary": {
+      "name": "Sky Blue 400",
+      "hex": "#38BDF8",
+      "rgb": { "r": 56, "g": 189, "b": 248 },
+      "hsl": { "h": 199, "s": 89, "l": 60 },
+      "usage": "Data visualization accents, active telemetry highlights, decorative gradients on dark surfaces",
+      "role": "decorative_telemetry"
+    },
+    "background": {
+      "name": "Pure White",
+      "hex": "#FFFFFF",
+      "rgb": { "r": 255, "g": 255, "b": 255 },
+      "hsl": { "h": 0, "s": 0, "l": 100 },
+      "usage": "Primary light canvas background, elevated card containers",
+      "role": "canvas_background"
+    },
+    "neutrals": {
+      "surface_subtle": "#F8FAFC",
+      "border_default": "#E2E8F0",
+      "text_muted": "#64748B"
+    }
+  },
+  "pairing_rules": {
+    "disallowed_pairings": [
+      {
+        "id": "PAIR-DISALLOW-001",
+        "foreground_color": "#38BDF8",
+        "background_color": "#FFFFFF",
+        "calculated_contrast_ratio": 2.15,
+        "wcag_aa_threshold_body": 4.5,
+        "wcag_aa_threshold_large": 3.0,
+        "status": "FAIL",
+        "reason": "Secondary accent #38BDF8 placed directly on #FFFFFF achieves a contrast ratio of only 2.15:1, severely failing WCAG 2.1 AA minimums (4.5:1 for normal text and 3.0:1 for large display text). This creates illegible text for low-vision and color-deficient readers.",
+        "severity": "error",
+        "approved_remediations": [
+          "Use darker brand blue #0284C7 (contrast 4.61:1) or #0369A1 (contrast 6.42:1) when placed on #FFFFFF.",
+          "Restrict #38BDF8 exclusively to dark backgrounds such as #0F172A (contrast ratio 7.82:1, passes AAA)."
+        ]
+      },
+      {
+        "id": "PAIR-DISALLOW-002",
+        "foreground_color": "#FFFFFF",
+        "background_color": "#38BDF8",
+        "calculated_contrast_ratio": 2.15,
+        "wcag_aa_threshold_body": 4.5,
+        "wcag_aa_threshold_large": 3.0,
+        "status": "FAIL",
+        "reason": "Inverse pairing with white typography on #38BDF8 background provides insufficient luminance difference (1.95:1).",
+        "severity": "error",
+        "approved_remediations": [
+          "Use #0F172A text on #38BDF8 backgrounds (contrast ratio 7.82:1)."
+        ]
+      }
+    ],
+    "approved_pairings": [
+      {
+        "foreground_color": "#0F172A",
+        "background_color": "#FFFFFF",
+        "contrast_ratio": 15.25,
+        "compliance": "WCAG AAA Pass"
+      },
+      {
+        "foreground_color": "#2563EB",
+        "background_color": "#FFFFFF",
+        "contrast_ratio": 4.56,
+        "compliance": "WCAG AA Pass (Body & Large)"
+      },
+      {
+        "foreground_color": "#38BDF8",
+        "background_color": "#0F172A",
+        "contrast_ratio": 7.82,
+        "compliance": "WCAG AAA Pass"
+      }
+    ]
+  },
+  "mandatory_trademarks": [
+    {
+      "canonical_form": "AeroCloud™",
+      "mark_type": "unregistered_trademark",
+      "symbol": "™",
+      "unicode": "\\u2122",
+      "required_regex": "\\bAeroCloud™\\b",
+      "prohibited_patterns": [
+        "\\bAerocloud(?!™)\\b",
+        "\\bAero Cloud\\b",
+        "\\baerocloud\\b",
+        "\\bAeroCloud(?!™)\\b"
+      ],
+      "enforcement_scope": "mandatory_on_first_and_prominent_mentions",
+      "severity_on_omission": "error",
+      "explanation": "Corporate brand name 'AeroCloud' must always retain proper CamelCase capitalization and be accompanied by the trademark symbol '™' (AeroCloud™) in all public-facing and marketing communications.",
+      "suggested_correction": "AeroCloud™"
+    },
+    {
+      "canonical_form": "MeshSync®",
+      "mark_type": "registered_trademark",
+      "symbol": "®",
+      "unicode": "\\u00ae",
+      "required_regex": "\\bMeshSync®\\b",
+      "prohibited_patterns": [
+        "\\bMeshsync(?!®)\\b",
+        "\\bMesh Sync\\b",
+        "\\bmeshsync\\b",
+        "\\bMeshSync(?!®)\\b"
+      ],
+      "enforcement_scope": "mandatory_on_all_commercial_mentions",
+      "severity_on_omission": "error",
+      "explanation": "Proprietary synchronization engine 'MeshSync' is an officially registered trademark and must carry the registered symbol '®' (MeshSync®) without hyphenation or spacing.",
+      "suggested_correction": "MeshSync®"
+    }
+  ],
+  "voice_and_tone": {
+    "core_attributes": [
+      "Authoritative",
+      "Engineered & Precise",
+      "Objective & Evidence-Backed",
+      "Transparent"
+    ],
+    "prohibited_tones": [
+      "Sensationalist hyperbole",
+      "Casual colloquialisms in technical SLAs",
+      "Unverifiable competitive disparagement"
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "document_title": "AeroCloud Systems Approved Enterprise Claims & Legal Substantiation Registry",
+  "version": "2026.1",
+  "governing_entity": "Office of the General Counsel & Product Compliance Board",
+  "last_audit_date": "2026-01-20T00:00:00Z",
+  "approved_claims": [
+    {
+      "claim_id": "CLM-AERO-001",
+      "metric_category": "availability_and_sla",
+      "canonical_claim": "99.95% API uptime SLA under Master Spec 2026, Section 2.1",
+      "metric_value": "99.95%",
+      "numerical_boundaries": {
+        "parameter": "api_uptime_percentage",
+        "min_allowed": 99.95,
+        "max_allowed": 99.95,
+        "unit": "percent",
+        "strict_equality": true
+      },
+      "approved_phrasings": [
+        "Provides an enterprise-grade 99.95% API uptime SLA under Master Spec 2026, Section 2.1.",
+        "Delivers 99.95% API availability backed by financial SLA credits as specified in Master Spec 2026, Section 2.1.",
+        "Guarantees 99.95% API uptime SLA for multi-region active-active deployments (Master Spec 2026, Section 2.1)."
+      ],
+      "prohibited_phrasings": [
+        "100% uptime",
+        "zero downtime guaranteed",
+        "99.999% uptime",
+        "foolproof continuous availability"
+      ],
+      "source_citation": "AeroCloud Systems Master Specification 2026, Section 2.1 (Service Level Commitments)",
+      "legal_substantiation_hash": "sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "requires_citation_in_copy": true,
+      "severity_on_unauthorized_claim": "error"
+    },
+    {
+      "claim_id": "CLM-AERO-002",
+      "metric_category": "cost_and_bandwidth_optimization",
+      "canonical_claim": "Reduces egress by up to 35% under Clause 8",
+      "metric_value": "up to 35%",
+      "numerical_boundaries": {
+        "parameter": "egress_cost_reduction_percentage",
+        "min_allowed": 0.0,
+        "max_allowed": 35.0,
+        "unit": "percent",
+        "qualifier_required": "up to"
+      },
+      "approved_phrasings": [
+        "Reduces egress costs by up to 35% under Clause 8 across inter-region distributed meshes.",
+        "Optimizes data routing to reduce egress fees by up to 35% compared to standard cloud transit (Clause 8).",
+        "Enables egress savings of up to 35% under Clause 8 through intelligent peering."
+      ],
+      "prohibited_phrasings": [
+        "cuts cloud bills by 80%",
+        "slashes bandwidth costs by half",
+        "reduces egress by 50%",
+        "eliminates egress charges completely"
+      ],
+      "source_citation": "AeroCloud Systems Enterprise Benchmark & Telemetry Report 2026, Clause 8 (Inter-Zone Transit Optimization)",
+      "legal_substantiation_hash": "sha256:9a32c664b889a712c448bb994326f18378d3810ff4247858c0bca80b6f952041",
+      "requires_citation_in_copy": true,
+      "severity_on_unauthorized_claim": "error"
+    },
+    {
+      "claim_id": "CLM-AERO-003",
+      "metric_category": "latency_and_realtime_performance",
+      "canonical_claim": "Sub-15ms cross-region telemetry synchronization under Clause 4.3",
+      "metric_value": "sub-15ms",
+      "numerical_boundaries": {
+        "parameter": "cross_region_sync_latency_p95",
+        "min_allowed": 15.0,
+        "max_allowed": 15.0,
+        "unit": "milliseconds",
+        "percentile": "p95"
+      },
+      "approved_phrasings": [
+        "Maintains sub-15ms cross-region telemetry synchronization under Clause 4.3 across major Tier-1 network zones.",
+        "Delivers sub-15ms telemetry synchronization via MeshSync® as audited under Clause 4.3.",
+        "Under Clause 4.3, cross-region mesh coordination completes with sub-15ms p95 latency."
+      ],
+      "prohibited_phrasings": [
+        "instantaneous global sync",
+        "zero-latency telemetry",
+        "real-time zero lag under 1ms"
+      ],
+      "source_citation": "MeshSync® Protocol Architecture Whitepaper v3.4, Clause 4.3 (Global State Convergence Benchmarks)",
+      "legal_substantiation_hash": "sha256:3d28fa6889495efd21124237f37bc447e179d6139bb279b8a8b84931a31d99b1",
+      "requires_citation_in_copy": true,
+      "severity_on_unauthorized_claim": "error"
+    },
+    {
+      "claim_id": "CLM-AERO-004",
+      "metric_category": "scalability_and_orchestration",
+      "canonical_claim": "Supports up to 100,000 concurrent edge nodes per cluster under Clause 11.2",
+      "metric_value": "100,000 concurrent edge nodes",
+      "numerical_boundaries": {
+        "parameter": "max_concurrent_nodes_per_cluster",
+        "min_allowed": 1,
+        "max_allowed": 100000,
+        "unit": "nodes",
+        "qualifier_required": "up to"
+      },
+      "approved_phrasings": [
+        "Orchestrates up to 100,000 concurrent edge nodes per cluster under Clause 11.2.",
+        "Scales horizontally to support up to 100,000 active nodes per mesh deployment (Clause 11.2).",
+        "Validated to sustain up to 100,000 concurrent edge nodes under Clause 11.2 performance testing."
+      ],
+      "prohibited_phrasings": [
+        "infinite scalability",
+        "unlimited edge nodes",
+        "supports millions of nodes without limits"
+      ],
+      "source_citation": "AeroCloud Edge Topologies Stress Validation Study 2025-Q4, Clause 11.2",
+      "legal_substantiation_hash": "sha256:4b9310d3221faec5913e2f5b8433d74823c19e590494490f2302195f24f5ef43",
+      "requires_citation_in_copy": true,
+      "severity_on_unauthorized_claim": "error"
+    },
+    {
+      "claim_id": "CLM-AERO-005",
+      "metric_category": "cryptography_and_compliance",
+      "canonical_claim": "Zero-trust mutual TLS 1.3 encryption across all inter-node channels under Clause 14.1",
+      "metric_value": "mTLS 1.3 / Zero-Trust",
+      "numerical_boundaries": {
+        "parameter": "tls_cryptographic_version",
+        "standard_version": "TLS 1.3",
+        "cipher_mode": "mTLS / AES-256-GCM / ChaCha20-Poly1305"
+      },
+      "approved_phrasings": [
+        "Implements zero-trust mutual TLS 1.3 encryption across all inter-node channels under Clause 14.1.",
+        "Secures all control plane communications with mandatory mTLS 1.3 as specified in Clause 14.1.",
+        "Enforces hardware-backed zero-trust mutual TLS 1.3 encryption (Clause 14.1)."
+      ],
+      "prohibited_phrasings": [
+        "100% hack-proof security",
+        "unbreakable encryption",
+        "guaranteed immune to all cyber attacks"
+      ],
+      "source_citation": "AeroCloud Security Baseline & Cryptographic Standards 2026, Clause 14.1",
+      "legal_substantiation_hash": "sha256:c18b69324541785bbdd5018619bcad8593a8d11c05d76aa2b4c102b4d13fa7be",
+      "requires_citation_in_copy": true,
+      "severity_on_unauthorized_claim": "error"
+    }
+  ]
+}
+
